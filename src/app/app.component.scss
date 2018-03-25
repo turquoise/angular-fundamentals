@@ -1,20 +1,42 @@
-.app {
 
-}
+.container {
+  margin-top: 50px;
+  background-color: red;
+  width:500px;
+  height: 500px;
+  position: relative;
+  z-index: 1;
 
-li {
-  list-style: none;
-}
-
-.status {
-  width: 10px;
-  height: 10px;
-  background: #c0392b;
-  display: block;
-  margin: 8px 10px 0 0;
-  float: left;
-  border-radius: 50%;
-  &.checked-in {
-    background: #2ecc71;
+  .type {
+    position:absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width:500px;
+    height: 500px;
+    z-index: 5;
   }
+  .details {
+    position:absolute;
+    top: 0;
+    left: 0;
+    background-color: green;
+    width:500px;
+    height: 500px;
+    z-index: 8;
+    opacity: 0;
+    transform: translateX(-100px);
+    animation-name: green;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+
+  }
+
+@keyframes green {
+  from { transform: translateX(-100px); opacity: 0;}
+  to { transform: translateX(0); opacity: 1; }
 }
+
+}
+
+
